@@ -1,21 +1,14 @@
-//
-
-// number guessing game
-
+//number guessing game
 #include <iostream>
 #include <ctime>
 using namespace std;
 
 int main()
 {
-
-    int num;
-    int guess;
-    int tries=0;
-
+    int num,guess,tries=0;
     srand(time(NULL));
 
-    num = (rand() % 100) + 1;
+    num = 1 + (rand() % 100);
 
     cout << "**************NUMBER GUESSING GAME**********************" << endl;
     do
@@ -34,7 +27,7 @@ int main()
         }
         else
         {
-            cout << "Correct ! # no. of tries: " << tries << '\n';
+            cout << "Correct ! # no. of tries: " << tries << endl;
         }
 
     } while (guess != num);
